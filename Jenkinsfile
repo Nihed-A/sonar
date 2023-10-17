@@ -5,7 +5,7 @@ pipeline {
         stage('GIT') {
             steps {
                 echo "Getting project from git"
-                git 'https://github.com/ahmedbalti/5sae6_groupe5_kaddem/new/NihedAttia-5sae6-G5'
+                git 'https://github.com/Nihed-A/sonar'
             }
         }
 
