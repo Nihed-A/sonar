@@ -5,7 +5,8 @@ pipeline {
         stage('GIT') {
             steps {
                 echo "Getting project from git"
-                git 'https://github.com/Nihed-A/sonar'
+               checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/Nihed-A/sonar.git', credentialsId: 'sonarqube-token']]])
+
             }
         }
 
